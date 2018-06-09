@@ -1,19 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xliff.OM", "Xliff.OM\Xliff.OM.csproj", "{F72462DB-976C-4E91-A82F-960B5D89AE1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XLIFF2-Object-Model.NetStandard", "XLIFF2-Object-Model.NetStandard\XLIFF2-Object-Model.NetStandard.csproj", "{CFF22F97-44A8-4BBA-8CBF-255C04981965}"
 EndProject
-Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Xliff.OM.Documentation", "Xliff.OM.Documentation\Xliff.OM.Documentation.shfbproj", "{88C94BFA-1C21-4E15-A97C-931B9CB4252C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{381519C4-F501-4A4A-8A47-6AB3420F773D} = {381519C4-F501-4A4A-8A47-6AB3420F773D}
-		{F72462DB-976C-4E91-A82F-960B5D89AE1C} = {F72462DB-976C-4E91-A82F-960B5D89AE1C}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xliff.OM.Tests", "Xliff.OM.Tests\Xliff.OM.Tests.csproj", "{381519C4-F501-4A4A-8A47-6AB3420F773D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xliff.Samples", "Xliff.Samples\Xliff.Samples.csproj", "{4B16D84A-5A6A-4EDF-8EB7-5DAB318879FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xliff.OM.Tests.NetCore", "Xliff.OM.Tests.NetCore\Xliff.OM.Tests.NetCore.csproj", "{B4076A07-44E8-4F1E-8088-7655D3B84186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,24 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F72462DB-976C-4E91-A82F-960B5D89AE1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F72462DB-976C-4E91-A82F-960B5D89AE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F72462DB-976C-4E91-A82F-960B5D89AE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F72462DB-976C-4E91-A82F-960B5D89AE1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88C94BFA-1C21-4E15-A97C-931B9CB4252C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88C94BFA-1C21-4E15-A97C-931B9CB4252C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88C94BFA-1C21-4E15-A97C-931B9CB4252C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88C94BFA-1C21-4E15-A97C-931B9CB4252C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{381519C4-F501-4A4A-8A47-6AB3420F773D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{381519C4-F501-4A4A-8A47-6AB3420F773D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{381519C4-F501-4A4A-8A47-6AB3420F773D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{381519C4-F501-4A4A-8A47-6AB3420F773D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B16D84A-5A6A-4EDF-8EB7-5DAB318879FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B16D84A-5A6A-4EDF-8EB7-5DAB318879FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B16D84A-5A6A-4EDF-8EB7-5DAB318879FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B16D84A-5A6A-4EDF-8EB7-5DAB318879FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF22F97-44A8-4BBA-8CBF-255C04981965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF22F97-44A8-4BBA-8CBF-255C04981965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF22F97-44A8-4BBA-8CBF-255C04981965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF22F97-44A8-4BBA-8CBF-255C04981965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4076A07-44E8-4F1E-8088-7655D3B84186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4076A07-44E8-4F1E-8088-7655D3B84186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4076A07-44E8-4F1E-8088-7655D3B84186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4076A07-44E8-4F1E-8088-7655D3B84186}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {781177C0-7A16-44F3-BFDA-B3204D0329F1}
 	EndGlobalSection
 EndGlobal

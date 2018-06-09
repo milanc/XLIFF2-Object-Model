@@ -1,0 +1,281 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TestData.Xliff.OM.Tests\DataWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\DataWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\DataWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\DocumentWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\DocumentWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\DocumentWithEverything.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\DocumentWithExtensions.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\DocumentWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\DocumentWithXmlPrefix.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\EmptyFile.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileNoteWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileNoteWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileNoteWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileWithChangeTrack.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileWithProfileData.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileWithProfiles.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileWithResourceData.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileWithValidation.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FileWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\FullDocument.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\GlossaryWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\GroupWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\GroupWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\GroupWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\IgnorableWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\IgnorableWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\IgnorableWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\InheritanceWithMinimalOutput.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\InvalidFile.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\MarkedSpanStartWithCustomType.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\MarkedSpanStartWithMissingTranslate.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\MarkedSpanStartWithTerm.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\MarkedSpanStartWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\MarkedSpanWithCustomType.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\MarkedSpanWithMissingTranslate.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\MarkedSpanWithNestedMarkedSpan.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\MarkedSpanWithTerm.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\MarkedSpanWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\OriginalDataWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\OriginalDataWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SegmentWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SegmentWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SegmentWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SkeletonWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SkeletonWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SkeletonWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SourceWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SourceWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SourceWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SpanningCodeEndWithNullId.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\SpanningCodeEndWithValidId.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\TargetWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\TargetWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\TargetWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\UnitNoteWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\UnitNoteWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\UnitNoteWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\UnitWithDefaultValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\UnitWithEmptyValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\UnitWithMetadata.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\UnitWithValidValues.xlf" />
+    <None Remove="TestData.Xliff.OM.Tests\ValidDocument.xlf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TestData.Xliff.OM.Tests\DataWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\DataWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\DataWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\DocumentWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\DocumentWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\DocumentWithEverything.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\DocumentWithExtensions.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\DocumentWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\DocumentWithXmlPrefix.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\EmptyFile.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileNoteWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileNoteWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileNoteWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileWithChangeTrack.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileWithProfileData.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileWithProfiles.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileWithResourceData.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileWithValidation.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FileWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\FullDocument.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\GlossaryWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\GroupWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\GroupWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\GroupWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\IgnorableWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\IgnorableWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\IgnorableWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\InheritanceWithMinimalOutput.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\InvalidFile.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\MarkedSpanStartWithCustomType.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\MarkedSpanStartWithMissingTranslate.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\MarkedSpanStartWithTerm.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\MarkedSpanStartWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\MarkedSpanWithCustomType.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\MarkedSpanWithMissingTranslate.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\MarkedSpanWithNestedMarkedSpan.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\MarkedSpanWithTerm.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\MarkedSpanWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\OriginalDataWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\OriginalDataWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SegmentWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SegmentWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SegmentWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SkeletonWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SkeletonWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SkeletonWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SourceWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SourceWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SourceWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SpanningCodeEndWithNullId.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\SpanningCodeEndWithValidId.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\TargetWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\TargetWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\TargetWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\UnitNoteWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\UnitNoteWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\UnitNoteWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\UnitWithDefaultValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\UnitWithEmptyValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\UnitWithMetadata.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\UnitWithValidValues.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData.Xliff.OM.Tests\ValidDocument.xlf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XLIFF2-Object-Model.NetStandard\XLIFF2-Object-Model.NetStandard.csproj" />
+  </ItemGroup>
+
+</Project>
