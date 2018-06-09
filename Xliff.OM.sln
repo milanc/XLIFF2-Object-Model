@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XLIFF2-Object-Model.NetStandard", "XLIFF2-Object-Model.NetStandard\XLIFF2-Object-Model.NetStandard.csproj", "{CFF22F97-44A8-4BBA-8CBF-255C04981965}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XLIFF2-Object-Model.NetStandard", "XLIFF2-Object-Model.NetStandard\XLIFF2-Object-Model.NetStandard.csproj", "{CFF22F97-44A8-4BBA-8CBF-255C04981965}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xliff.OM.Tests.NetCore", "Xliff.OM.Tests.NetCore\Xliff.OM.Tests.NetCore.csproj", "{B4076A07-44E8-4F1E-8088-7655D3B84186}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xliff.OM.Tests.NetCore", "Xliff.OM.Tests.NetCore\Xliff.OM.Tests.NetCore.csproj", "{B4076A07-44E8-4F1E-8088-7655D3B84186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

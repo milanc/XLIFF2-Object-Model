@@ -4,7 +4,9 @@
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.IO;
+    using System.Linq;
     using System.Xml;
+    using System.Xml.Linq;
     using Localization.Xliff.OM.Core;
     using Localization.Xliff.OM.Exceptions;
     using Localization.Xliff.OM.Serialization;
@@ -30,89 +32,92 @@
 
         public TestContext TestContext { get; set; }
 
+
+        public static IEnumerable<object[]> GetTestItems()
+        {
+            XDocument xdoc = XDocument.Load(FileBasedTests.DataDrivenTestFile);
+            return xdoc.Element("TestData").Descendants().Select(e => new[]
+            {
+               e.Attribute(TestEntryPathAttribute)?.Value,
+               e.Attribute(TestEntryResultAttribute)?.Value,
+               e.Attribute(TestEntryErrorAttribute)?.Value
+            });
+        }
+
         #region Test Methods
         /// <summary>
         /// Tests that defaults for <see cref="Data"/> are correct.
         /// </summary>
-        [DataSource(
-                    FileBasedTests.DataDrivenDataSource,
-                    FileBasedTests.DataDrivenTestFile,
-                    FileBasedTests.TestEntryElementName,
-                    DataAccessMethod.Sequential)]       
-        //[TestMethod()]
-        //[TestCategory(TestUtilities.UnitTestCategory)]
-        //public void Xliff_DataDriven()
-        //{
-        //    string path;
-        //    ExpectedResult expectedResult;
-        //    int errorNumber;
+        [TestMethod]
+        [DynamicData("GetTestItems", DynamicDataSourceType.Method)]
+        public void Xliff_DataDriven(string path, string expectedResultString, string errorNumberString)
+        {
+            ExpectedResult expectedResult;
+            int errorNumber;
 
-        //    errorNumber = -1;
-        //    path = (string)this.TestContext.DataRow[FileBasedTests.TestEntryPathAttribute];
-        //    expectedResult = (ExpectedResult)Enum.Parse(
-        //                                                typeof(ExpectedResult),
-        //                                                (string)this.TestContext.DataRow[FileBasedTests.TestEntryResultAttribute]);
-        //    if (expectedResult == ExpectedResult.ValidationError)
-        //    {
-        //        errorNumber = int.Parse((string)this.TestContext.DataRow[FileBasedTests.TestEntryErrorAttribute]);
-        //    }
-            
-        //    Trace.WriteLine("Path: " + path);
-        //    Trace.WriteLine("ExpectedResult: " + expectedResult);
-        //    Trace.WriteLine("ErrorNumber: " + errorNumber);
+            errorNumber = -1;
+            expectedResult = (ExpectedResult)Enum.Parse(typeof(ExpectedResult), expectedResultString);
+            if (expectedResult == ExpectedResult.ValidationError)
+            {
+                errorNumber = int.Parse(errorNumberString);
+            }
 
-        //    try
-        //    {
-        //        Assert.IsTrue(System.IO.File.Exists(path), "File '{0}' doesn't exist.", path);
-        //        using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
-        //        {
-        //            XliffDocument document;
-        //            XliffReader reader;
+            Trace.WriteLine($"path:{path}\r\nexpectedResult:{expectedResult}\r\nerrorNumber:{errorNumber}");
 
-        //            reader = new XliffReader();
-        //            document = reader.Deserialize(stream);
-        //        }
+            try
+            {
+                Assert.IsTrue(System.IO.File.Exists(path), "File '{0}' doesn't exist.", path);
+                using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+                {
+                    XliffDocument document;
+                    XliffReader reader;
 
-        //        Assert.AreEqual(expectedResult, ExpectedResult.Success, "Expected result is incorrect.");
-        //    }
-        //    catch (FormatException)
-        //    {
-        //        if (expectedResult != ExpectedResult.BadFormat)
-        //        {
-        //            throw;
-        //        }
-        //    }
-        //    catch (InvalidOperationException)
-        //    {
-        //        if (expectedResult != ExpectedResult.InvalidOperation)
-        //        {
-        //            throw;
-        //        }
-        //    }
-        //    catch (NotSupportedException)
-        //    {
-        //        if (expectedResult != ExpectedResult.NotSupported)
-        //        {
-        //            throw;
-        //        }
-        //    }
-        //    catch (ValidationException e)
-        //    {
-        //        if (expectedResult != ExpectedResult.ValidationError)
-        //        {
-        //            throw;
-        //        }
+                    reader = new XliffReader();
+                    document = reader.Deserialize(stream);
+                }
 
-        //        Assert.AreEqual(errorNumber, e.ErrorNumber, "ErrorNumber is incorrect.");
-        //    }
-        //    catch (XmlException)
-        //    {
-        //        if (expectedResult != ExpectedResult.ReadError)
-        //        {
-        //            throw;
-        //        }
-        //    }
-        //}
+                Assert.AreEqual(expectedResult, ExpectedResult.Success, "Expected result is incorrect.");
+            }
+            catch (FormatException)
+            {
+                if (expectedResult != ExpectedResult.BadFormat)
+                {
+                    throw;
+                }
+            }
+            catch (InvalidOperationException)
+            {
+                if (expectedResult != ExpectedResult.InvalidOperation)
+                {
+                    throw;
+                }
+            }
+            catch (NotSupportedException)
+            {
+                if (expectedResult != ExpectedResult.NotSupported)
+                {
+                    throw;
+                }
+            }
+            catch (ValidationException e)
+            {
+                if (expectedResult != ExpectedResult.ValidationError)
+                {
+                    throw;
+                }
+
+                Assert.AreEqual(errorNumber, e.ErrorNumber, "ErrorNumber is incorrect.");
+            }
+            catch (XmlException)
+            {
+                if (expectedResult != ExpectedResult.ReadError)
+                {
+                    throw;
+                }
+            }
+
+        }
+
 
         [TestMethod()]
         [TestCategory(TestUtilities.UnitTestCategory)]
@@ -153,7 +158,7 @@
         }
         #endregion Test Methods
 
-        private enum ExpectedResult
+        public enum ExpectedResult
         {
             BadFormat,
             InvalidOperation,
